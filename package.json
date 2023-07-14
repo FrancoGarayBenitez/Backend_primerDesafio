@@ -1,0 +1,11 @@
+{
+  "name": "primer-desafio-entregable",
+  "version": "1.0.0",
+  "description": "Clases con ECMAScript y ECMAScript avanzado",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Franco Garay Benitez",
+  "license": "ISC"
+}
