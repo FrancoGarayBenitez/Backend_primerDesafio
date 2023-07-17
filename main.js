@@ -34,7 +34,7 @@ class ProductManager {
         let validarCampos = true
 
         Object.values(product).forEach((e) => {
-            if (e.toString().trim() === "" || (e.toString().trim() === "0")) {
+            if (e.toString().trim() === "") {
                 validarCampos = false
             }
         })
@@ -66,12 +66,16 @@ class ProductManager {
 const productManager = new ProductManager;
 
 //Agregamos un producto
-productManager.addProduct("Zapatillas", "Adidas negras", 25000, "urlImagen", "A4250", 20);
-productManager.addProduct("Buzo", "Nike gris", 10000, "urlImagen", "B4020", 20);
-productManager.addProduct("Camiseta", "Selección Argentina titular", 15000, "urlImagen", "C1010", 10);
+productManager.addProduct("Zapatillas", "Adidas negras", 25000, "urlImagen", "A001", 20);
+productManager.addProduct("Buzo", "Nike gris", 10000, "urlImagen", "A002", 20);
+productManager.addProduct("Camiseta", "Selección Argentina titular", 15000, "urlImagen", "A003", 10);
+//Probando error agregando un producto con algunos campos vacíos o haciendo coincidir el code con otro producto existente.
+productManager.addProduct("Pelota de fútbol", "   ", 5000, "   ", "A004", 15)
 
 //Obtener productos creados
 console.log(productManager.getProducts());
 
 //Buscar un producto por ID
 productManager.getProductById(2);
+//Probando error queriendo obtener un producto cuyo Id no exista.
+productManager.getProductById(5);
